@@ -7,7 +7,7 @@ public class Main {
         boolean salir = false;
         String userInput = null;
 
-        CustomColection colection = new CustomColection(3);
+        CustomCollection collection = new CustomCollection(3);
 
         while (!salir) {
             System.out.println("Introduzca un nombre o pulse Q para salir");
@@ -16,13 +16,13 @@ public class Main {
             if (userInput.equals("Q")) {
                 salir = true;
             } else {
-                colection.insert(userInput, 0);
+                collection.insert(userInput, 0);
             }
 
             String aux;
 
-            for (int i = 0; i < colection.length(); i++) {
-                aux = (String) colection.getElement(i);
+            for (int i = 0; i < collection.length(); i++) {
+                aux = (String) collection.getElement(i);
                 System.out.println(i + " - " + aux);
 
             }
