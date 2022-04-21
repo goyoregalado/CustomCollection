@@ -4,30 +4,20 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        boolean salir = false;
-        String userInput = null;
 
-        //CustomCollection collection = new CustomCollection(3);
-        GenericCollection<String> collection = new GenericCollection<String>(3);
+        GenericStack<Integer> stack = new GenericStack<Integer>();
 
-        while (!salir) {
-            System.out.println("Introduzca un nombre o pulse Q para salir");
-            userInput = sc.nextLine();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
 
-            if (userInput.equals("Q")) {
-                salir = true;
-            } else {
-                collection.insert(userInput, 0);
-            }
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
 
-            String aux;
+        stack.push(4);
 
-            for (int i = 0; i < collection.length(); i++) {
-                aux = collection.getElement(i);
-                System.out.println(i + " - " + aux);
-            }
-        }
-
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
 
     }
 }
