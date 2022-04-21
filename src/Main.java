@@ -7,7 +7,8 @@ public class Main {
         boolean salir = false;
         String userInput = null;
 
-        CustomCollection collection = new CustomCollection(3);
+        //CustomCollection collection = new CustomCollection(3);
+        GenericCollection<String> collection = new GenericCollection<String>(3);
 
         while (!salir) {
             System.out.println("Introduzca un nombre o pulse Q para salir");
@@ -22,9 +23,8 @@ public class Main {
             String aux;
 
             for (int i = 0; i < collection.length(); i++) {
-                aux = (String) collection.getElement(i);
+                aux = collection.getElement(i);
                 System.out.println(i + " - " + aux);
-
             }
         }
 
