@@ -51,7 +51,6 @@ public class CustomCollection {
         for (int j = i; j < length - 1; j++) {
             data[j] = data[j + 1];
         }
-
         length--;
         return aux;
     }
